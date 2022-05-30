@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="./images/image-1.jpg" id="image" height="100%" width="100%">
+        </div>
+
+        <div class="scroll-container-title">
+            <h1 id="title">Levels</h1>
+            <h1 id="title-scroller">Levels</h1>
+        </div>
+        <div class="scroll-container-artist">
+            <h3 id="artist">Avicii</h3>
+            <h3 id="artist-scroller">Avicii</h3>
+        </div>
+
+        <audio src="./songs/song-1.mp3" id="song" controls hidden></audio>
+
+        <div class="progress-container">
+            <div class="duration-wrapper">
+                <span id="current-time">0:00</span>
+                <span id="duration">3:18</span>
+            </div>
+
+            <div class="progress-bar-container" id="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <div class="btn-controls">
+                <span id="previous"><i class="fas fa-backward fa-3x"></i></span>
+                <span id="pause"><i class="fas fa-play fa-3x"></i></span>
+                <span id="next"><i class="fas fa-forward fa-3x"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js" type="module"></script>
+</body>
+</html>
