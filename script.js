@@ -99,6 +99,7 @@ function handleProgressBar(e) {
 	let percent = (e.clientX - left) / 320;
 	progressBar.style.width = `${percent * 100}%`;
 	audioElement.currentTime = percent * audioElement.duration;
+	currentTime.innerText = formatToMSS(Math.floor(percent * audioElement.duration));
 }
 
 function handlePause() {
