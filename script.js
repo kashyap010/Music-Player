@@ -88,7 +88,8 @@ function handleTimeUpdate(e) {
 	if (isPlaying) {
 		let { currentTime: time, duration: dur } = e.srcElement;
 		currentTime.innerText = formatToMSS(Math.floor(time));
-		duration.innerText = formatToMSS(Math.floor(dur));
+		if (isNaN(dur)) duration.innerText = '0:00';
+		else duration.innerText = formatToMSS(Math.floor(dur));
 		progressBar.style.width = `${time / dur * 100}%`;
 		if (time === dur) loadNextSong();
 	}
